@@ -1,6 +1,6 @@
 document.querySelectorAll('[data-year]').forEach(node => { node.textContent = new Date().getFullYear(); });
 
-const steamUrl = window.SYSTM_CONTENT?.steamUrl;
+const steamUrl = window.NULLOFFSET_CONTENT?.steamUrl;
 if (steamUrl) {
   try {
     const url = new URL(steamUrl);

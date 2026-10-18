@@ -1,7 +1,7 @@
 {
-  "name": "systm-website",
+  "name": "nulloffset-website",
   "version": "1.0.0",
   "private": true,
-  "description": "The independent game studio Systm. A build-free static website.",
+  "description": "The independent game studio NullOffset. A build-free static website.",
   "scripts": { "start": "node tools/serve.mjs", "preview": "node tools/serve.mjs" }
 }

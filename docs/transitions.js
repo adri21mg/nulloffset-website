@@ -1,6 +1,6 @@
 // Tiny cross-page pixel wipe. Navigation still works with JavaScript/storage disabled.
 (() => {
-  const key = 'systm-page-wipe';
+  const key = 'nulloffset-page-wipe';
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   let arriving = false;
   try {

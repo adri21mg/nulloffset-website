@@ -1,4 +1,4 @@
-/* Systm: quiet studio identity, loud game imagery. No external fonts or dependencies. */
+/* NullOffset: quiet studio identity, loud game imagery. No external fonts or dependencies. */
 :root { color-scheme: dark; --bg: #101110; --text: #eceee8; --muted: #a0a39b; --line: #343730; --accent: #d3dfa1; --mono: 'Courier New', Courier, monospace; }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; scroll-padding-top: 24px; }
@@ -19,14 +19,14 @@ h1, h2 { line-height: 1.05; }
 .skip-link { position: fixed; top: 12px; left: 12px; z-index: 10; background: var(--text); color: var(--bg); padding: 10px 18px; transform: translateY(-180%); }
 .skip-link:focus { transform: translateY(0); }
 .site-header { display: flex; align-items: center; justify-content: space-between; gap: 32px; padding-block: 62px 46px; }
-.studio-logo { width: 250px; }
+.studio-logo { width: 300px; }
 .studio-description { font-family: var(--mono); color: var(--muted); font-size: 14px; margin-top: 17px; }
 nav { display: flex; align-items: center; gap: 30px; font-size: 14px; }
 nav a { display: inline-block; padding-block: 10px; text-decoration: none; color: var(--muted); transition: transform .15s ease, color .15s ease, text-shadow .15s ease; }
 nav a:hover, nav a:focus-visible { transform: translate(2px, -2px); text-shadow: 3px 3px 0 #000; }
 nav a[aria-current] { color: var(--text); text-decoration: underline; text-decoration-thickness: 1px; }
 .compact { padding-block: 38px 52px; }
-.compact .studio-logo { width: 154px; }
+.compact .studio-logo { width: 175px; }
 .brand-link { flex-shrink: 0; }
 .eyebrow { font-family: var(--mono); font-size: 12px; letter-spacing: .12em; line-height: 1.5; text-transform: uppercase; }
 .game-link { display: block; text-decoration: none; }
@@ -177,13 +177,13 @@ a.game-button:hover, a.game-button:focus-visible { color: #111; transform: trans
 @media (max-width: 760px) {
   .wrap { width: calc(100% - 36px); }
   .site-header { padding-block: 34px 30px; gap: 22px; align-items: flex-start; }
-  .studio-logo { width: 190px; }
+  .studio-logo { width: 220px; }
   .home .site-header { flex-wrap: wrap; }
   .home nav { width: 100%; justify-content: flex-start; gap: 28px; }
   nav { gap: 18px; font-size: 14px; }
   .compact { align-items: center; padding-block: 27px 38px; flex-wrap: wrap; }
   .compact nav { flex-wrap: wrap; }
-  .compact .studio-logo { width: 120px; }
+  .compact .studio-logo { width: 135px; }
   .studio-description { margin-top: 12px; font-size: 13px; }
   .game-art .cover { aspect-ratio: 4/3; object-position: 47% center; }
   .game-title-overlay { left: 22px; right: 22px; bottom: 24px; }
@@ -215,7 +215,7 @@ a.game-button:hover, a.game-button:focus-visible { color: #111; transform: trans
   .about-copy .lead { font-size: 22px; }
 }
 @media (max-width: 540px) { .compact { gap: 15px; } .compact nav { width: 100%; gap: 22px; } }
-@media (max-width: 380px) { .compact .studio-logo { width: 100px; } nav { gap: 15px; font-size: 13px; } .compact nav { gap: 20px; } }
+@media (max-width: 380px) { .compact .studio-logo { width: 115px; } nav { gap: 15px; font-size: 13px; } .compact nav { gap: 20px; } }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition: none !important; animation: none !important; } .game-art:hover .cover, .game-link:hover .arrow, nav a:hover, nav a:focus-visible, a.text-link:hover, a.text-link:focus-visible, .game-link:hover .game-caption .text-link, .game-link:focus-visible .game-caption .text-link { transform: none; } }
 /* Studio navigation: quiet rectangular targets; the game cover keeps its original links. */
 body:not(.game-page) nav { gap: 6px; flex-wrap: wrap; }
