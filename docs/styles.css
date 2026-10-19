@@ -366,3 +366,7 @@ body.media-tool-page nav a:hover, body.media-tool-page nav a:focus-visible { tex
   .project-copy { padding-top: 18px; }
   .project-copy h3 { font-size: 24px; }
 }
+/* Home logo intro (intro.js). Tagline and arrow wait for the logo; without JS they simply show. */
+.intro-logo { display: block; width: 100%; height: auto; overflow: visible; }
+.studio-hero .studio-tagline, .studio-hero .hero-scroll { transition: opacity .8s ease; }
+.studio-hero.intro-playing:not(.intro-done) .studio-tagline, .studio-hero.intro-playing:not(.intro-done) .hero-scroll { opacity: 0; }
