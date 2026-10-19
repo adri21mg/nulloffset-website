@@ -4,59 +4,76 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#101110">
-  <meta name="description" content="NullOffset is an independent game studio making strange ideas into games. Currently working on TRAPPIST-1, a short sci-fi horror game.">
+  <meta name="description" content="NullOffset is an independent game studio making strange little games. Currently working on TRAPPIST-1, a short sci-fi horror game.">
   <title>NullOffset — Studio</title>
   <link rel="icon" href="media/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css?v=d82f4b20bda1">
+  <link rel="stylesheet" href="styles.css?v=7a1c3e90">
   <script src="transitions.js"></script>
   <script src="site.js" defer></script>
 </head>
 <body class="home">
   <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header wrap">
-    <div class="identity">
-      <h1><img class="studio-logo" src="media/nulloffset.svg" width="2061" height="358" alt="NullOffset"></h1>
-      <p class="studio-description">Independent game studio.</p>
-    </div>
+  <header class="site-header home-header wrap">
     <nav aria-label="Main navigation">
       <a href="index.html" aria-current="page">Home</a>
-      <a href="lmms-collab.html">Tools</a>
+      <a href="#projects">Projects</a>
+      <a href="#tools">Tools</a>
       <a href="about.html">About</a>
       <a href="mailto:contact@nulloffset.com">Contact <span aria-hidden="true">↗</span></a>
     </nav>
   </header>
-  <main id="main" class="wrap">
-    <article class="featured-game">
-      <a class="game-link" href="trappist-1.html" aria-labelledby="game-title game-action">
-        <div class="game-art">
-          <img class="cover" src="media/extraction-1280.webp" srcset="media/extraction-640.webp 640w, media/extraction-1280.webp 1280w" sizes="(max-width: 720px) calc(100vw - 36px), (max-width: 1240px) calc(100vw - 96px), 1120px" width="1280" height="720" alt="A red dwarf fills the window of a dark industrial space station." fetchpriority="high">
-          <div class="game-title-overlay">
-            <span class="eyebrow">A short sci-fi horror game</span>
-            <h2 id="game-title"><img class="game-logo" src="media/trappist.svg" width="1350" height="371" alt="TRAPPIST-1"></h2>
-          </div>
-        </div>
-        <div class="game-caption">
-          <p>Do your job.<br>Don’t ask what keeps the station running.</p>
-          <span class="text-link" id="game-action">Explore the game <span class="arrow" aria-hidden="true">↗</span></span>
-        </div>
-      </a>
-    </article>
-    <section class="tool-teaser" aria-labelledby="tool-title">
-      <div><p class="eyebrow">Free &amp; open source</p><h2 id="tool-title"><img class="tool-logo" src="media/lmms-collab.svg" width="1611" height="204" alt="LMMS-Collab" loading="lazy"></h2></div>
-      <div><p>A collaborative take on LMMS.<br>Make music in the same session, together.</p><a class="outline-link" href="lmms-collab.html">Explore the tool <span aria-hidden="true">↗</span></a></div>
+  <main id="main">
+    <section class="studio-hero" aria-label="NullOffset">
+      <h1 class="logo-glitch"><img class="studio-logo" src="media/nulloffset.svg" width="2061" height="358" alt="NullOffset"></h1>
+      <p class="studio-tagline">Making strange little games.</p>
+      <a class="hero-scroll" href="#projects" aria-label="See our projects">↓</a>
     </section>
-    <aside class="next-game" aria-labelledby="next-title">
-      <div>
-        <p class="eyebrow">Coming soon</p>
-        <h2 id="next-title">Something else is cooking.</h2>
-        <p>We’ll get to that.</p>
+
+    <section class="projects wrap" id="projects" aria-labelledby="projects-title">
+      <h2 class="section-title" id="projects-title">Our <strong>projects</strong></h2>
+      <div class="project-grid">
+        <article class="project-card">
+          <a class="project-link" href="trappist-1.html">
+            <div class="project-art game-art">
+              <img class="cover" src="media/extraction-1280.webp" srcset="media/extraction-640.webp 640w, media/extraction-1280.webp 1280w" sizes="(max-width: 760px) calc(100vw - 36px), 560px" width="1280" height="720" alt="A red dwarf fills the window of a dark industrial space station." loading="lazy">
+              <img class="project-logo game-logo" src="media/trappist.svg" width="1350" height="371" alt="">
+            </div>
+            <div class="project-copy">
+              <p class="eyebrow">A short sci-fi horror game</p>
+              <h3>TRAPPIST-1</h3>
+              <p>Do your job. Don’t ask what keeps the station running.</p>
+              <span class="outline-link">Explore the game <span aria-hidden="true">↗</span></span>
+            </div>
+          </a>
+        </article>
+        <article class="project-card">
+          <div class="project-art skeleton-art">
+            <img src="media/skeleton.gif" width="432" height="446" alt="A dancing skeleton with two assault rifles." loading="lazy">
+            <span class="project-badge">In development</span>
+          </div>
+          <div class="project-copy">
+            <p class="eyebrow">Coming soon</p>
+            <h3>Skaletons</h3>
+            <p>Something else is cooking. More soon.</p>
+          </div>
+        </article>
       </div>
-      <div class="skeleton">
-        <picture>
-          <img src="media/skeleton.gif" width="432" height="446" alt="A dancing skeleton with two assault rifles." loading="lazy">
-        </picture>
-      </div>
-    </aside>
+    </section>
+
+    <section class="tools wrap" id="tools" aria-labelledby="tools-title">
+      <h2 class="section-title" id="tools-title">Our <strong>tools</strong></h2>
+      <article class="tool-card">
+        <a class="project-link tool-card-link" href="lmms-collab.html">
+          <div class="project-art"><img class="cover" src="media/lmms-cursors.webp" width="1280" height="720" alt="Several coloured cursors editing the same LMMS song." loading="lazy"></div>
+          <div class="project-copy">
+            <p class="eyebrow">Free &amp; open source</p>
+            <h3><img class="tool-logo" src="media/lmms-collab.svg" width="1611" height="204" alt="LMMS-Collab" loading="lazy"></h3>
+            <p>A collaborative take on LMMS. Make music in the same session, together.</p>
+            <span class="outline-link">Explore the tool <span aria-hidden="true">↗</span></span>
+          </div>
+        </a>
+      </article>
+    </section>
   </main>
   <footer class="site-footer wrap">
     <span>© NullOffset <span data-year>2026</span></span>

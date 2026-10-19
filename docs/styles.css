@@ -320,3 +320,51 @@ body.media-tool-page nav a:hover, body.media-tool-page nav a:focus-visible { tex
 .session-photo figcaption { margin: 0; font: 16px/1.6 Arial, Helvetica, sans-serif; }
 .session-photo figcaption p { margin-top: 16px; color: var(--text); font-size: 24px; letter-spacing: -.03em; line-height: 1.3; }
 @media (max-width: 760px) { .session-photo { grid-template-columns: 1fr; gap: 20px; padding: 22px; margin: -10px 0 24px; } }
+
+/* Studio home: big centred mark, then projects and tools as cards. */
+.home-header { position: absolute; z-index: 3; left: 50%; transform: translateX(-50%); justify-content: flex-end; padding-block: 28px; }
+.studio-hero { position: relative; min-height: 100svh; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 28px; padding: 120px 24px; text-align: center; background: radial-gradient(ellipse at 50% 45%, #1b1d1a 0%, var(--bg) 62%); }
+.studio-hero .logo-glitch { width: min(860px, 82vw); }
+.studio-hero .studio-logo { width: 100%; }
+.studio-tagline { font-family: var(--mono); color: var(--muted); font-size: clamp(14px, 1.6vw, 18px); letter-spacing: .04em; }
+.studio-hero .hero-scroll { color: var(--muted); }
+.studio-hero .hero-scroll:hover { color: var(--accent); }
+.logo-glitch.glitching .studio-logo { mask-image: linear-gradient(to bottom, #000 0% 24%, transparent 24% 36%, #000 36% 62%, transparent 62% 74%, #000 74% 100%); }
+.studio-hero .logo-glitch::before, .studio-hero .logo-glitch::after { background-image: url('media/nulloffset.svg'); filter: none; }
+.section-title { margin-bottom: 40px; font-size: clamp(34px, 5vw, 56px); font-weight: 400; letter-spacing: -.045em; text-align: center; }
+.section-title strong { font-weight: 700; }
+.projects { padding-block: 40px 90px; scroll-margin-top: 30px; }
+.tools { padding-block: 70px 100px; border-top: 1px solid var(--line); scroll-margin-top: 30px; }
+.project-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 36px; }
+.project-link { display: block; height: 100%; text-decoration: none; }
+.project-link:hover { color: inherit; }
+.project-art { position: relative; overflow: hidden; aspect-ratio: 16 / 10; background: #1d1913; }
+.project-art .cover { width: 100%; height: 100%; object-fit: cover; transition: transform .3s ease-out, filter .3s ease; }
+.project-link:hover .project-art .cover { transform: scale(1.025); filter: brightness(1.08); }
+.project-art .project-logo { position: absolute; z-index: 1; left: 28px; bottom: 26px; width: min(62%, 330px); }
+.skeleton-art { display: grid; place-items: center; background: radial-gradient(circle at 50% 55%, #262a22, #121411 70%); border: 1px dashed var(--line); }
+.skeleton-art img { width: 40%; max-width: 200px; }
+.project-badge { position: absolute; top: 18px; left: 18px; padding: 5px 10px; border: 1px solid var(--line); background: var(--bg); color: var(--muted); font-family: var(--mono); font-size: 11px; letter-spacing: .1em; text-transform: uppercase; }
+.project-copy { padding-top: 24px; }
+.project-copy .eyebrow { color: var(--muted); margin-bottom: 10px; }
+.project-copy h3 { margin: 0 0 10px; font-size: 28px; letter-spacing: -.03em; line-height: 1.1; }
+.project-copy > p:not(.eyebrow) { color: var(--muted); max-width: 440px; }
+.project-copy .outline-link { margin-top: 22px; font-size: 14px; }
+.project-link:hover .outline-link { color: var(--bg); border-color: var(--accent); background: var(--accent); }
+.tool-card-link { display: grid; grid-template-columns: 1.3fr 1fr; gap: 44px; align-items: center; }
+.tool-card .project-copy { padding-top: 0; }
+.tool-card .tool-logo { width: min(100%, 360px); height: auto; margin-block: 6px 4px; }
+@media (max-width: 760px) {
+  .home-header { justify-content: center; padding-block: 18px; }
+  .home nav { justify-content: center; }
+  .studio-hero { gap: 20px; }
+  .studio-hero .logo-glitch { width: 88vw; }
+  .section-title { margin-bottom: 28px; }
+  .projects { padding-block: 20px 60px; }
+  .tools { padding-block: 50px 70px; }
+  .project-grid, .tool-card-link { grid-template-columns: 1fr; gap: 44px; }
+  .tool-card-link { gap: 24px; }
+  .project-art .project-logo { left: 18px; bottom: 18px; }
+  .project-copy { padding-top: 18px; }
+  .project-copy h3 { font-size: 24px; }
+}
