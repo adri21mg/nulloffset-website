@@ -25,7 +25,7 @@ if (glitchLogo) {
       const bounds = glitchLogo.getBoundingClientRect();
       if (bounds.bottom > 0 && bounds.top < innerHeight) glitchLogo.classList.add('glitching');
       endTimer = setTimeout(schedule, 240);
-    }, 6500 + Math.random() * 6000);
+    }, 2500 + Math.random() * 3000);
   };
   reduced.addEventListener('change', schedule);
   document.addEventListener('visibilitychange', schedule);
