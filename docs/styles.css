@@ -370,3 +370,8 @@ body.media-tool-page nav a:hover, body.media-tool-page nav a:focus-visible { tex
 .intro-logo { display: block; width: 100%; height: auto; overflow: visible; }
 .studio-hero .studio-tagline, .studio-hero .hero-scroll { transition: opacity .8s ease; }
 .studio-hero.intro-playing:not(.intro-done) .studio-tagline, .studio-hero.intro-playing:not(.intro-done) .hero-scroll { opacity: 0; }
+/* Social links: small square icon buttons stacked in the footer. */
+.social-links { display: flex; gap: 8px; }
+.site-footer .social-links a { display: grid; place-items: center; padding: 0; width: 44px; height: 44px; border: 1px solid #4a4d44; border-radius: 7px; background: #1a1c19; color: var(--text); transition: background .15s, color .15s, border-color .15s, transform .15s; }
+.site-footer .social-links a:hover, .site-footer .social-links a:focus-visible { background: var(--accent); border-color: var(--accent); color: var(--bg); transform: translate(2px, -2px); box-shadow: 3px 3px 0 #000; }
+.social-links svg { display: block; }
