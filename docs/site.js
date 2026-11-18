@@ -64,13 +64,26 @@ if (viewer && typeof viewer.showModal === 'function') {
 }
 
 // The trailer is user-controlled. Gameplay uses genuine, continuously looping GIFs.
-const videos = [...document.querySelectorAll('video')];
+const videos = [...document.querySelectorAll('video:not([data-ambient])')];
 videos.forEach(video => video.addEventListener('play', () => {
   videos.forEach(other => { if (other !== video) other.pause(); });
 }));
 document.addEventListener('visibilitychange', () => {
   if (document.hidden) videos.forEach(video => video.pause());
 });
+
+// Muted background loops: still with reduced motion, otherwise always playing.
+const ambient = [...document.querySelectorAll('video[data-ambient]')];
+if (ambient.length) {
+  const still = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const sync = () => ambient.forEach(video => {
+    if (still.matches || document.hidden) video.pause();
+    else video.play().catch(() => { /* Autoplay refused: the poster stays. */ });
+  });
+  still.addEventListener('change', sync);
+  document.addEventListener('visibilitychange', sync);
+  sync();
+}
 
 // A maximum of three pixels of cursor-follow movement. No touch or reduced-motion effect.
 const artwork = document.querySelector('.game-art');

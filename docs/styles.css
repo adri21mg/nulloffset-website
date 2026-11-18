@@ -375,3 +375,25 @@ body.media-tool-page nav a:hover, body.media-tool-page nav a:focus-visible { tex
 .site-footer .social-links a { display: grid; place-items: center; padding: 0; width: 44px; height: 44px; border: 1px solid #4a4d44; border-radius: 7px; background: #1a1c19; color: var(--text); transition: background .15s, color .15s, border-color .15s, transform .15s; }
 .site-footer .social-links a:hover, .site-footer .social-links a:focus-visible { background: var(--accent); border-color: var(--accent); color: var(--bg); transform: translate(2px, -2px); box-shadow: 3px 3px 0 #000; }
 .social-links svg { display: block; }
+
+/* Sawed-Off: same game-page layout, menu loop behind, logo with a tight constant shake. */
+.sawedoff-hero .hero-art { object-position: 50% 40%; }
+.sawedoff-logo { line-height: .9; }
+.sawedoff-logo > * { display: inline-block; animation: sawed-shake .14s steps(4, end) infinite; }
+.sawedoff-logo img { width: min(720px, 100%); height: auto; filter: drop-shadow(0 6px 24px rgb(0 0 0 / .55)); }
+@keyframes sawed-shake {
+  0%, 100% { transform: translate(0, 0); }
+  25% { transform: translate(.6px, -.4px); }
+  50% { transform: translate(-.5px, .5px); }
+  75% { transform: translate(.4px, .5px); }
+}
+.jam-note { margin: -8px 0 24px; color: var(--muted); font-family: var(--mono); font-size: 13px; letter-spacing: .04em; }
+.jam-section .hero-actions { margin-top: 0; }
+.sawedoff-page .screenshot-thumbnails { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+@media (max-width: 760px) { .sawedoff-page .screenshot-thumbnails { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (prefers-reduced-motion: reduce) { .sawedoff-logo > * { animation: none; } }
+/* Home: the first project spans the full row; the rest pair up below it. */
+.project-card.featured { grid-column: 1 / -1; }
+.project-card.featured .project-art { aspect-ratio: 16 / 7; }
+@media (max-width: 760px) { .project-card.featured .project-art { aspect-ratio: 16 / 10; } }
+.project-badge.badge-right { left: auto; right: 18px; }
